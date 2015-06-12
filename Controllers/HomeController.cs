@@ -14,9 +14,9 @@ namespace CarbonIT.Snapblob.Controllers
     {
 
         public const string SlackAuthorizeUrl = @"https://slack.com/oauth/authorize";
-        public const string SlackClientId = "2912213807.3045364464";
+        public const string SlackClientId = "";
         public const string SlackRedirectUri = "";
-        public const string ContainerName = "snapblob";
+        public const string ContainerName = "";
 
         private readonly CloudBlobContainer _container;
         private readonly CloudStorageAccount _storageAccount;
