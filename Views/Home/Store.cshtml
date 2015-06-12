@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Store";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var url = ("http://" + Request.Url.Authority + "/r/" + ViewBag.BlobUri);
+}
+
+
+
+
+<div class="jumbotron">
+    <h1>Ton lien</h1>
+    <p>
+        <a href="@url">@url</a>
+    </p>
+</div>
+

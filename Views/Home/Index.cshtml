@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "La tête dans le cloud";
+}
+
+<h1>La tête dans le cloud</h1>
+<br />
+@using (Html.BeginForm("Store", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        <label>Expire dans (en secondes) : </label><input name="ExpirationTime" type="text" class="form-control" placeholder="Définissez une valeur d'expiration">
+
+    </div>
+
+    <div class="form-group">
+        <input id="UploadedFile" type="file" name="UploadedFile">
+    </div>
+
+}
+
+@section Scripts
+{
+    <script>
+        $("#UploadedFile").fileinput({
+            maxFileSize: 1000,
+            maxFilesNum: 1
+        });
+    </script>
+}
+
+<img style="position: fixed;bottom: -150px;z-index: -5;max-width: 300px;margin: auto;" src="/Images/trollface1.jpg" />
+
